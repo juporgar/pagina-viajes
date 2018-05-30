@@ -1,0 +1,21 @@
+{
+  "name": "pagina-viajes",
+  "description": "",
+  "main": "",
+  "authors": [
+    "juporgar <julian.porgar@gmail",
+    "com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/juporgar/pagina-viajes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}
