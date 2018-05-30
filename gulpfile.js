@@ -24,17 +24,7 @@ gulp.task('css',()=>{
     .pipe(gulp.dest('public/dist/css'))
 })
 
-gulp.task('default',['browser','scripts','css']);
-
-
-gulp.task('browser',()=>{
-    browserSync.init({
-        server:{
-            baseDir: "./"
-        }
-    });
-});
-
+gulp.task('default',['scripts','css']);
 
  gulp.watch('.js/javascript/*.js').on('change',()=>{    
      return gulp.src('public/javascript/*.js')
@@ -54,6 +44,6 @@ gulp.task('browser',()=>{
      .pipe(gulp.dest('public/dist/css'))
  });
 
-gulp.watch(['index.html','./public/javascripts/app.js','./public/stylesheets/style.css']).on('change',()=>{
-    browserSync.reload();
-})
+// gulp.watch(['index.html','./public/javascripts/app.js','./public/stylesheets/style.css']).on('change',()=>{
+//     browserSync.reload();
+// })
