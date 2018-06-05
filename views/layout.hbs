@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='dist/css/css.min.css' />
-    <link rel='stylesheet' href='components/bootstrap/dist/css/bootstrap.min.css'
-  </head>
-  <body>
-    {{{body}}}
-    <script type="text/javascript" src="dist/script/script.min.js">
-    </script>
-  </body>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='components/bootstrap/dist/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='dist/css/css.min.css' />
+  <!--Siempre se deja el ultimo, para que te seleccione tu css -->
+</head>
+
+<body>
+  {{> header }}<!--Para que te llame al archivo "header.hbs" -->
+  {{{body}}} 
+  {{> footer }}
+  <script type="text/javascript" src="dist/script/script.min.js">
+  </script>
+</body>
+
 </html>
