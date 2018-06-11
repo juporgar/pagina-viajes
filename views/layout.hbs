@@ -5,6 +5,7 @@
   <title>{{title}}</title>
   <link rel='stylesheet' href='components/bootstrap/dist/css/bootstrap.min.css' />
   <link rel='stylesheet' href='dist/css/css.min.css' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Siempre se deja el ultimo, para que te seleccione tu css -->
 </head>
 
@@ -12,8 +13,9 @@
   {{> header }}<!--Para que te llame al archivo "header.hbs" -->
   {{{body}}} 
   {{> footer }}
-  <script type="text/javascript" src="dist/script/script.min.js">
-  </script>
+  <script type="text/javascript" src="/dist/script/script.min.js"> </script>
+  <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
