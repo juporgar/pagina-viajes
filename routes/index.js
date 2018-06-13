@@ -13,4 +13,18 @@ router.get('/quienessomos', function (req, res, next) { /* para hacer un llamami
     title: 'Quienes Somos'
   });
 });
+
+router.get('/login', function (req, res, next) { /* para hacer un llamamiento a login.hbs*/
+  res.render('login', {
+    title: 'Login'
+  });
+});
+
+router.get('/registro', function (req, res, next) { /* para hacer un llamamiento a login.hbs*/
+  res.render('registro', {
+    title: 'Registro'
+  });
+});
+
+
 module.exports = router;

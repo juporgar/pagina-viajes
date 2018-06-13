@@ -241,3 +241,42 @@ nav a:hover {
   margin-top: 50px;
 }
 
+/*Registro*/
+
+.ima-registro{
+  background: url("/images/travel_3.jpg") no-repeat center top;
+  background-position:center center;
+  text-align: center;
+  min-height: 400px;
+  width:100%;
+  background-size:cover;
+}
+.cuadrado{
+  background-color: rgba(200,200,250, 0.5);
+  margin-top: 25px;
+}
+.checkbox{
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.btn{
+  margin-left: 30px;
+}
+
+/*Login*/
+
+.img-login{
+  background: url("/images/travel_2.jpg") no-repeat center top;
+  background-position:center center;
+  text-align: center;
+  min-height: 400px;
+  width:100%;
+  background-size:cover;
+}
+.form-group-login{
+  margin-top:35px;
+  margin-left: 50px;
+}
+.forgot-password{
+  color:white;
+}
