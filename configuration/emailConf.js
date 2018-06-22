@@ -6,7 +6,7 @@ let mailer = {};
         service:"Gmail",
         auth:{
             user:"julian.porgar@gmail.com",
-            pass:"asaber726"
+            pass:""
         }
     },
     {
