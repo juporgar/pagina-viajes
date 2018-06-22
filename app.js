@@ -7,6 +7,10 @@ var hbs = require('hbs');
 var hbsUtils = require("hbs-utils")(hbs);
 let expresssessions = require('express-session'); //añadido
 let flash = require('connect-flash'); //añadido
+var winston = require("winston");
+var Logger = require("./configuration/winston");
+var hbsEmail = require("nodemailer-express-handlebars");
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,6 +18,7 @@ let loginRouter = require('./routes/integration'); //añadido
 
 
 var app = express();
+winston.error("Este es un mensaje de informacion")
 
 //view engine partials
 hbsUtils.registerPartials(`${__dirname}/views/partials`);
@@ -33,7 +38,8 @@ app.use(expresssessions({
 
 app.use(flash()); //añadido, para que funcione flash y siempre es deadjo de gestion de sesiones
 
-app.use(logger('dev'));
+//app.use(logger('dev'));
+app.use(logger('combined', {stream: winston.stream}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -44,10 +50,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 
-
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use("*",function(req, res, next) {
+res.status(404);
+res.render('error404');
 });
 
 // error handler

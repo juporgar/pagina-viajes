@@ -1,10 +1,11 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 /*La parte del header*/
 
-h1 {
+.text h1 {
   color: white;
   display: flex;
   align-items: center;
@@ -154,13 +155,34 @@ nav a:hover {
   margin-top: 30px;
 }
 .tituloquien{
-  color: #0A0A2A;  
+  color: blue;  
 }
 
 .textoquien {
-  color: #0A0A2A;
+  color: blue;
 }
-
+/*El quienes somos sin imagen*/
+hr {
+  margin-left: 0px;
+  height: 5px;
+  width: 50%;
+  background-color: yellow;
+  margin-top: 0px;
+}
+.Quienes{
+  display: flex;
+  justify-content: flex-start;
+  color:lightblue;
+  background-color: lightblue;
+}
+.margin{
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+#btnD{
+  color:yellow;
+  background-color: blue;
+}
 /*Mapa y formulario*/
 
 .mapaGoogle {
@@ -278,5 +300,20 @@ nav a:hover {
   margin-left: 50px;
 }
 .forgot-password{
-  color:white;
+  color:black;
+  font-size: 25px;
+  text-align: center;
+}
+
+.Error{
+  color:red;
+  font-size: 30px;
+}
+/*Error 404*/
+
+.error-template {
+text-align: center;
+}
+.error-template h1{
+  color:black;
 }
