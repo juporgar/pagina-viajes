@@ -42,5 +42,16 @@ class loginController extends Controller
             info="";
         }
     }
+
+    regeneratePass() //coger la información que se manda con el boton
+    {
+        let userModel = new UserModel();
+        console.log('email usuario ->' + this.req.body.email);
+        userModel.findUserByEmail(this.req.body.email)
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch(error=>console.log(error));
+    }
 }
 module.exports = loginController;

@@ -5,12 +5,12 @@ let mailer = {};
     mailer.transporter = email.createTransport({
         service:"Gmail",
         auth:{
-            user:"julian.porgar@gmail.com",
-            pass:""
+            user:"julian.geekhubs@gmail.com",
+            pass:"1234QWEr"
         }
     },
     {
-        from: "julian.porgar@gmail.com",
+        from: "julian.geekhubs@gmail.com",
         header:{
 
         }

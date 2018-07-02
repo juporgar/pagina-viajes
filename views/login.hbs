@@ -2,42 +2,36 @@
     <div class="row">
         <div class="col-12 img-login">
             <div class="offset-3 col-6">
-                <div class="cuadrado"></div>
+                <div class="cuadrado">
                     <div class="row">
-
-                    <div class="Error">
-                        
-                        {{#if info}}
+                        <div class="Error">
+                            {{#if info}}
                             <div>
                                 (El error es porque {{ info}})
                             </div>
-                        {{/if}}
-                    </div>
+                            {{/if}}
+                        </div>
 
                         <div class="offset-2 col-7">
                             <h3 class="tituloRegistro">LOGIN</h3>
                         </div>
-                    </div>    
+                    </div>
 
-
-
+                    <!--cuerpo del login -->
 
                     <div class="cuerpoLogin">
                         <form method="POST">
                             <div class="formulario">
-                                <input class="form-control" placeholder="Usuario o E-mail" name="uname" type="text" required >
+                                <input class="form-control" placeholder="Usuario o E-mail" name="uname" type="text" required>
                             </div>
                             <div class="formulario">
-                                <input class="form-control" placeholder="Contraseña" name="psw" type="password" value="" required >
+                                <input class="form-control" placeholder="Contraseña" name="psw" type="password" value="" required>
                             </div>
-
-
                             <div class="form-group-login">
                                 <div class="col-sm-9 col-sm-offset-4">
                                     <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                                 </div>
                             </div>
-
                             <div>
                                 <a href="#" class="forgot-password" data-toggle="modal" data-target="#RecuperarPass">
                                     ¿No recuerdas tu contraseña?
@@ -45,21 +39,22 @@
                             </div>
                         </form>
 
+                        <!--popup de ¿No recuerdas la contraseña? -->
 
-                        <form method="POST">
+                        <form method="POST" action="/email">
                             <div class="modal" tabindex="-1" role="dialog" id="RecuperarPass">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Escribenos un correo</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                                <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <input class="form-control" placeholder="Escribe tu correo" name="recuperarPass" type="email" value="">                                        </div>
+                                            <input class="form-control" placeholder="Escribe tu correo" name="email" type="email" value=""> </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary">Enviar</button>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                         </div>
                                     </div>
@@ -69,7 +64,7 @@
                     </div>
 
 
-                </div>     
+                </div>
             </div>
         </div>
     </div>

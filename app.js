@@ -38,8 +38,8 @@ app.use(expresssessions({
 
 app.use(flash()); //añadido, para que funcione flash y siempre es deadjo de gestion de sesiones
 
-//app.use(logger('dev'));
-app.use(logger('combined', {stream: winston.stream}));
+app.use(logger('dev'));
+//app.use(logger('combined', {stream: winston.stream}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

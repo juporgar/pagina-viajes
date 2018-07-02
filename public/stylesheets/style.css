@@ -81,7 +81,7 @@ nav a:hover {
 
 /*Barra de opciones*/
 .navbar{
-  width: 600px;
+  width: 750px;
   height: 100px;
 }
 .puente2 {
@@ -265,6 +265,9 @@ hr {
 
 /*Registro*/
 
+.preguntaRegistro{
+  font-size: 20px;
+}
 .ima-registro{
   background: url("/images/travel_3.jpg") no-repeat center top;
   background-position:center center;
