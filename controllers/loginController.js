@@ -1,6 +1,6 @@
 const Controller = require('./controller');
 const UserModel = require('../models/users');
-
+const SecureService = require('../services/secureService');
 class loginController extends Controller
 {
    constructor(req, res, next)
@@ -13,15 +13,19 @@ class loginController extends Controller
        let Usuario = this.req.body.uname;
        let password = this.req.body.psw;
        let userModel = new UserModel();
-       
+       let secureService = new SecureService();
         userModel.findUser(Usuario,(info)=>{
             if (info.length === 0){
                 this.req.flash('info','El usuario no existe');
                 this.index();    
             }else{ 
-                if(password==info[0].password){
+                if(secureService.comparePass(password,info[0].password)){
                     console.log("password");
-                    this.index();
+                    this.res.render('index',{
+                        layaout: 'layout',
+                        user:Usuario
+                    });
+
                 }else{
                     this.req.flash('info','El password es incorrecto')
                     this.index();    

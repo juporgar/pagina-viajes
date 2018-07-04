@@ -15,8 +15,15 @@
             <a class="nav-link active" href="/#fotos">Destinos</a>
             <a class="nav-link" href="/#tituloquien">Quienes Somos</a>
             <a class="nav-link" href="/#Donde">Donde estamos</a>
+          {{#unless user}}
             <a class="nav-link" href="../login">Login</a>
             <a class="nav-link" href="../registro">Registro</a>
+          {{/unless}}
+          {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/closeSession">{{user}}</a>
+          </li>
+          {{/if}}
           </nav>
         </div>
 
@@ -54,7 +61,6 @@
                 <a class="nav-link" href="../login">Login</a>
                 <a class="nav-link" href="../registro">Registro</a>
               </nav>
-
             </div>
           </div>
           <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
