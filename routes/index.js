@@ -7,6 +7,7 @@ const IndexController = require('../controllers/indexController');
 const Email = require("../configuration/emailConf");
 const Path = require("path");
 const HbsEmail = require("nodemailer-express-handlebars");
+const ActivateUserController = require('../controllers/activateUserController');
 
 router.get('/',(req, res, next)=>{
   let indexController = new IndexController(req,res,next);
@@ -53,4 +54,19 @@ router.get("/email",(req,res,next)=>{
     //let email = new Email(req, res, next);
     //email.sendemail();
   })
+
+  router.get('/admin', (req, res, next) => {
+    let registroController = new RegistroController(req, res, next);
+    registroController.index();
+  });
+
+  
+  //Para activar la cuenta
+
+  router.get('/activate/:hash',(req, res, next)=>{
+    let activateUserController = new ActivateUserController(req, res, next);
+    activateUserController.index();
+  });
+  
+
 module.exports = router;

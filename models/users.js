@@ -51,6 +51,32 @@ class UserModel {
             })
         })
     }
+
+    getUserByHash(hash){
+        return new Promise((resolve,reject)=>{
+            if(!conn) return reject('No existe conexión');
+            let SQL = `SELECT * FROM clientes WHERE hash = '${hash}';`;
+            conn.query(SQL,(error, rows)=>{
+                if (error) return reject(error);
+                else return resolve(rows);
+            })
+        })
+    };
+
+
+    // Activar usuario
+    setActiveUser(hash){
+        return new Promise ((resolve, reject)=>{
+            if(!conn) return reject('No existe conexión');
+            let SQL = `UPDATE clientes set active=1 , hash='' where hash='${hash}';`;
+            conn.query(SQL, (error, rows)=>{
+                if(error) return reject(error);
+                else return resolve(rows);
+            })
+        })
+    };
+
+
 }
 
 module.exports = UserModel;

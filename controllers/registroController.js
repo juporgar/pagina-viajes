@@ -45,7 +45,7 @@ register(registerData)
     index(){
         this.res.render('registro',{
             title:'Registro',
-            layaout:'layout'
+            layout:'layout-simp'
         })
     }
 }

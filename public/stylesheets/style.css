@@ -91,6 +91,18 @@ nav a:hover {
   color:white;
 }
 
+/*Header-simp*/
+
+.image-simp {
+  background: url("/images/nathan-anderson-316188-unsplash.jpg") no-repeat center top;
+  background-position: center center;
+  min-height: 100px;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 /*La parte de las fotos*/
 .card-deck{
   margin-left: 200px;
@@ -141,7 +153,6 @@ nav a:hover {
   margin: 30px;
   color: darkblue;
 }
-
 
 /*La parte de quienes somos*/
 

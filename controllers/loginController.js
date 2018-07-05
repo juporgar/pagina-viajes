@@ -19,8 +19,12 @@ class loginController extends Controller
                 this.req.flash('info','El usuario no existe');
                 this.index();    
             }else{ 
+                if(info[0].active === 0){
+                    this.req.flash.error = "La cuenta no esta activa";
+                    this.res.redirect('/login');}
+
                 if(secureService.comparePass(password,info[0].password)){
-                    console.log("password");
+                    this.req.session.user = Usuario; //Para guardar el usuario en una sesion flash
                     this.res.render('index',{
                         layaout: 'layout',
                         user:Usuario
@@ -40,9 +44,9 @@ class loginController extends Controller
         if(info == "") 
         {
             console.log("No Existe Info");
-            this.res.render('login', {title:'Login', layout:'layout'});
+            this.res.render('login', {title:'Login', layout: "layout-simp"});
         }else{
-            this.res.render('login', {title:'Login', layout:'layout',info:info});
+            this.res.render('login', {title:'Login', layout: "layout-simp", info: info});
             info="";
         }
     }
