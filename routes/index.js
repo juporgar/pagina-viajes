@@ -8,6 +8,7 @@ const Email = require("../configuration/emailConf");
 const Path = require("path");
 const HbsEmail = require("nodemailer-express-handlebars");
 const ActivateUserController = require('../controllers/activateUserController');
+const AdminController = require('../controllers/adminController');
 
 router.get('/',(req, res, next)=>{
   let indexController = new IndexController(req,res,next);
@@ -56,8 +57,8 @@ router.get("/email",(req,res,next)=>{
   })
 
   router.get('/admin', (req, res, next) => {
-    let registroController = new RegistroController(req, res, next);
-    registroController.index();
+    let adminController = new AdminController(req, res, next);
+    adminController.index();
   });
 
   
