@@ -9,12 +9,15 @@
       var validation = Array.prototype.filter.call(forms, function(form) {
         form.addEventListener('submit', function(event) {
            
-            var pass1=$("#passw");
-            var pass2=$("#passw2");
+            var pass1=$("#password");
+            var pass2=$("#password2");
+            alert()
 
             if(pass1.val()!==pass2.val())
             {
                 $('#advicePassDiferent').show();
+                event.preventDefault();
+                event.stopPropagation();
             } 
             else
             {
