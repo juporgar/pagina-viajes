@@ -10,6 +10,8 @@ const HbsEmail = require("nodemailer-express-handlebars");
 const ActivateUserController = require('../controllers/activateUserController');
 const AdminController = require('../controllers/adminController');
 const AnadirController = require('../controllers/anadirController')
+const ModificarController = require('../controllers/modificarController')
+
 
 router.get('/',(req, res, next)=>{
   let indexController = new IndexController(req,res,next);
@@ -70,6 +72,15 @@ router.get("/email",(req,res,next)=>{
     let anadirController = new AnadirController(req, res, next);
     anadirController.index();
   });
+
+  //La vista de modificar de admin
+  
+  router.post('/modificar', (req, res, next) => {
+    let modificarController = new ModificarController(req, res, next);
+    modificarController.index();
+  });
+
+
 
   //Para activar la cuenta
 
