@@ -1,17 +1,20 @@
 <div class="cuerpoLogin">
-    <form method="POST">
+    <form action="/multer/upload" method="post" role="form">
         <div class="formulario">
             <input class="form-control" placeholder="Nombre del viaje" name="viaje" type="text" value="" required>
         </div>
         <div class="formulario">
             <input class="form-control" placeholder="Escribe una descripción" name="descripcion" type="text" required>
         </div>
-        <div class="formulario">
-            <input class="form-control" placeholder="Imagen" name="imagen" type="text" value="" required>
+        <div class="form-group">
+            <input type="file" name="file" class="form-control" required>
         </div>
         <div class="formulario">
             <input class="form-control" placeholder="Escribe el precio" name="precio" type="text" required>
         </div>
+        <label class="letra_checkbox">
+            <input type="checkbox" class="activar_checkbox"> Dale click para activar el viaje
+        </label>
     </form>
     <div class="form-group-login">
         <div class="col-sm-9 col-sm-offset-4">

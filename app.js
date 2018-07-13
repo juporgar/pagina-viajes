@@ -15,7 +15,7 @@ var hbsEmail = require("nodemailer-express-handlebars");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let loginRouter = require('./routes/integration'); //añadido
-
+var Multer = require('./routes/multer');
 
 var app = express();
 winston.error("Este es un mensaje de informacion")
@@ -49,6 +49,7 @@ app.use('./components',express.static(`${__dirname}/public/components`));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/multer',Multer)
 
 // catch 404 and forward to error handler
 app.use("*",function(req, res, next) {

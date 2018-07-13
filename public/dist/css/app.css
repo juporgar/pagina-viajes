@@ -331,3 +331,18 @@ text-align: center;
 .error-template h1{
   color:black;
 }
+
+/*Vista añadir*/
+
+.letra_checkbox{
+  color:red;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.activar_checkbox{
+  height: 20px;
+  width: 30px;
+}

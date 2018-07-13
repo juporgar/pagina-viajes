@@ -66,7 +66,7 @@ router.get("/email",(req,res,next)=>{
 
   //La vista de añadir de admin
   
-  router.get('/anadir', (req, res, next) => {
+  router.post('/anadir', (req, res, next) => {
     let anadirController = new AnadirController(req, res, next);
     anadirController.index();
   });

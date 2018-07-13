@@ -27,23 +27,37 @@
                                     <td>{{travel}}</td>
                                     <td>{{dates}}</td>
                                     <td>{{description}}</td>
-                                    <td><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-folder"></i></button></td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-folder"></i>
+                                        </button>
+                                    </td>
                                     <td>{{price}}$</td>
-                                    <td><div class="checkbox"><label><input type="checkbox" value="" checked="{{activate}}"></label></div></td>
-                                    <td><button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="" checked="{{activate}}">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 {{/each}}
                             </tbody>
                         </table>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Añadir</button>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Modificar</button>
-                        </div>
                     </div>
                 </div>
                 <div class="col-2"></div>
+                <form action="/anadir" method="post">
+                    <button class="btn btn-primary btn-lg text-uppercase buttonadmin">Añadir</button>
+                </form>
+                <form action="/modificar" method="post">
+                    <button class="btn btn-primary btn-lg text-uppercase buttonadmin">Modificar</button>
+                </form>
             </div>
         </div>
     </div>
