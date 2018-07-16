@@ -1,4 +1,5 @@
 const Controller = require('./controller');
+const Users = require('../models/users');
 // const TravelModel = require('../models/travelModel');
 
 class adminController extends Controller {
@@ -6,13 +7,17 @@ class adminController extends Controller {
         super(req, res, next)
     }
 
-     index() {
-             this.res.render('admin', {
-                 title: 'admin',
-                 layout: 'layout-simp'
-             })
-     }
-    
+    index() {
+        let users = new Users();
+        users.showTravells()
+            .then((data) => {
+                this.res.render('admin', {
+                    title: 'admin',
+                    layout: 'layout-simp',
+                    data:data
+                })
+            })
+    }
 }
 
 module.exports = adminController;

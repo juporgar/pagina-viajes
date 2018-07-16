@@ -33,7 +33,6 @@ class activateUserController extends  Controller
         Activate(this.req.params.hash)
             .then((data)=>{
                 console.log('Mensaje' + JSON.stringify(data));
-                console.log("COMPROBACIÓN de donde se ROMPE!!!!!");
                 
                 if(data.length===0){
                     this.res.render('activate',

@@ -76,6 +76,31 @@ class UserModel {
         })
     };
 
+    //Enseñar viajes
+
+    showTravells(){
+        return new Promise ((resolve,reject)=>{
+            if(!conn) return reject('No existe conexión');
+            let SQL =`SELECT * FROM viajes`;
+            conn.query(SQL,(error, rows)=>{
+                if(error) return reject (error);
+                else return resolve(rows);
+            })
+        })
+    }
+
+    //Añadir viajes
+
+    addTravells(viajes,descripcion,imagen,precio){
+        return new Promise ((resolve,reject)=>{
+            if(!conn) return reject ('No existe conexión');
+            let SQL =`INSERT INTO viajes (viajes,descripcion,imagen,precio) VALUES('${viajes}','${descripcion}','${imagen}','${precio}');`;
+            conn.query(SQL,(error,rows)=>{
+                if(error) return reject (error);
+                else return resolve(rows);
+            })
+        })
+    }
 
 }
 

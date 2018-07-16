@@ -12,7 +12,6 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Viajes</th>
-                                    <th scope="col">Fechas</th>
                                     <th scope="col">Descripción</th>
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Precio</th>
@@ -21,22 +20,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each travels}}
+                                {{#each data}}
                                 <tr>
-                                    <td scope="row">{{id}}</td>
-                                    <td>{{travel}}</td>
-                                    <td>{{dates}}</td>
-                                    <td>{{description}}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-folder"></i>
-                                        </button>
-                                    </td>
-                                    <td>{{price}}$</td>
+                                    <td scope="row">{{Id}}</td>
+                                    <td>{{viajes}}</td>
+                                    <td>{{descripcion}}</td>
+                                    <td>{{imagen}}</td>
+                                    <td>{{precio}}$</td>
                                     <td>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value="" checked="{{activate}}">
+                                                <input type="checkbox" value="" checked="{{activado}}">
                                             </label>
                                         </div>
                                     </td>

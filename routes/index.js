@@ -27,12 +27,6 @@ router.post('/login', (req, res, next) => {
   loginController.login();
 })
 
-// router.get('/login', function (req, res, next) { /* para hacer un llamamiento a login.hbs*/
-//   res.render('login', {
-//     title: 'Login'
-//   });
-// });
-
 router.get('/registro', (req, res, next) => {
   let registroController = new RegistroController(req, res, next);
   registroController.index();
@@ -80,8 +74,6 @@ router.get("/email",(req,res,next)=>{
     modificarController.index();
   });
 
-
-
   //Para activar la cuenta
 
   router.get('/activate/:hash',(req, res, next)=>{
@@ -89,5 +81,4 @@ router.get("/email",(req,res,next)=>{
     activateUserController.index();
   });
   
-
 module.exports = router;

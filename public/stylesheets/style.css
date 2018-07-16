@@ -340,9 +340,18 @@ text-align: center;
   justify-content: center;
   font-size: 20px;
   margin-top: 20px;
+  margin-right: 70px;
 }
 
 .activar_checkbox{
   height: 20px;
   width: 30px;
+}
+#crearAnadir{
+  width: 100px;
+}
+#crearAn{
+  display: flex;
+  justify-content: center;
+  margin-left: 90px;   
 }
